@@ -1,0 +1,66 @@
+p, h1, h3 {
+  color: black;	;
+}
+.big {
+  background-color: #C495FF;
+  height: 600px;
+}
+.site-heading {
+  padding: 200px 0;
+}
+.nav-right {
+  align-items: flex-start;
+}
+.aboutHeader {
+  align-items: center;
+  text-align: center;
+  padding-top: 20px;
+}
+.btn {
+  color: white;
+}
+.headerImage img{
+  height: 600px;
+  align-items: center;
+  padding: 120px 0;
+}
+.alignStuff {
+  text-align: center;
+  padding-bottom: 15px;
+ }
+.row {
+  padding-top: 40px;
+}
+
+.navbar {
+  background-color: white;
+  padding-bottom: 0;
+}
+.nav-item:hover {
+  text-decoration: underline #FFDF00	;
+
+}
+footer {
+  background-color: gray;
+}
+.getInvolved {
+  padding-bottom: 30px;
+  background-color: #EEE;
+}
+.involve {
+  background-color: #EEE;
+
+}
+@media (max-width: 991px) {
+  .big {
+    height: 1000px;
+  }
+  .site-heading {
+    padding: 30px 0;
+  }
+  .headerImage img{
+    height: 600px;
+    align-items: center;
+    padding-top: 400px 0;
+  }
+}
