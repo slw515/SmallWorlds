@@ -1,5 +1,14 @@
-p, h1, h3 {
-  color: black;	;
+h1, h3 {
+  color: black;
+  /* font-family: 'Karla', sans-serif; */
+  font-family: 'Frank Ruhl Libre', serif;
+
+}
+p {
+  color: black;
+  font-family: 'Karla', sans-serif;
+  /* font-family: 'Frank Ruhl Libre', serif; */
+
 }
 .big {
   background-color: #C495FF;
@@ -36,8 +45,8 @@ p, h1, h3 {
   background-color: white;
   padding-bottom: 0;
 }
-.nav-item:hover {
-  text-decoration: underline #FFDF00	;
+.nav-link:hover {
+  text-decoration: underline #FFDF00;
 
 }
 footer {
