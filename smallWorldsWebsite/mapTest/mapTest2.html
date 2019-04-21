@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<title>Attach a popup to a marker instance</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+<style>
+body { margin:0; padding:0;  }
+#map { position:absolute; top:0; bottom:0; margin-left: 20%; margin-right: auto; width:70%;}
+</style>
+</head>
+<body>
+
+<style>
+
+#marker {
+  background-image: url('cranleigh.jpeg');
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+#secondmarker {
+  background-image: url('nyuadlogo.jpg');
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+}
+
+</style>
+
+<div id='map'></div>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoic3RldmVud3lrcyIsImEiOiJjanU5Znp0czgwaXJnNGRuMHNkbGhiejJsIn0.TBTOujvkD29ak0_nGuqfRA';
+var monument = [54.43, 24.52];
+var secondMarker = [54.44, 24.55];
+const map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/stevenwyks/cju9gakqe19yq1fo9yozml2ol',
+  center: monument,
+  zoom: 9.6
+});
+
+
+
+// create the popup
+var popup = new mapboxgl.Popup({ offset: 25 })
+  .setText('Project Name');
+
+var popup2 = new mapboxgl.Popup({ offset: 25 })
+  .setText('Project #');
+
+// create DOM element for the marker
+var first = document.createElement('hello');
+  first.id = 'marker';
+var second = document.createElement('second');
+  second.id = 'secondmarker';
+// create the marker
+new mapboxgl.Marker(first)
+  .setLngLat(monument)
+  .setPopup(popup) // sets a popup on this marker
+  .addTo(map);
+new mapboxgl.Marker(second)
+    .setLngLat(secondMarker)
+    .setPopup(popup2) // sets a popup on this marker
+    .addTo(map);
+</script>
+
+</body>
+</html>
